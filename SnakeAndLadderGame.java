@@ -13,7 +13,11 @@ public class SnakeAndLadderGame {
            int checkMovement= (int) Math.floor(Math.random()*10)%3;
 		switch(checkMovement) {
 		case LADDER:
-			position+=diceNumber;
+                        int i= position+=diceNumber;
+			 if(i>100)
+				 position=i-diceNumber;
+			 else
+				 position=i;
 			break;
 		case SNAKE:
 			position-=diceNumber;
