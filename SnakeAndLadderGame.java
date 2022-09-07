@@ -14,13 +14,18 @@ public class SnakeAndLadderGame {
 		switch(checkMovement) {
 		case LADDER:
                         int i= position+=diceNumber;
-			 if(i>100)
-				 position=i-diceNumber;
-			 else
+			 if(i>100){
+				  position=i-diceNumber;
+                                  System.out.println("OOPS! You can't go more than winning position so stay in same position");
+                                 }
+			 else{
 				 position=i;
+                                 System.out.println("It's LADDER! Climb Up by" +" " +diceNumber+ " "+ "steps");
+                                }
 			break;
 		case SNAKE:
 			position-=diceNumber;
+                        System.out.println("It's SNAKE! Go back by" +" " +diceNumber+ " "+ "steps");
 			break;
 		default:
 			System.out.println("stay in same position");
