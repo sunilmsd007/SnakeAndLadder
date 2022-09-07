@@ -3,12 +3,14 @@ package snakeAndLadder;
 public class SnakeAndLadderGame {
 
 	static int position=0;
+        static int diceCount=0;
         public static final int LADDER=1;
 	public static final int SNAKE=2;
         public static void main(String[] args) {
            
            while(position<100) {
            int diceNumber=(int) Math.floor(Math.random()*10)%6 + 1;
+           diceCount=diceCount+1;
            System.out.println("Dice Number is: " +diceNumber);
            int checkMovement= (int) Math.floor(Math.random()*10)%3;
 		switch(checkMovement) {
@@ -29,5 +31,6 @@ public class SnakeAndLadderGame {
 			position=0;
 		System.out.println("Current position is: " +position);
 		}
+           System.out.println("Total Number of times Dice rolled is: " +diceCount);
   }
 }
