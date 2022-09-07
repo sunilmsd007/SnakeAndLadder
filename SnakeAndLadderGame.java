@@ -7,6 +7,7 @@ public class SnakeAndLadderGame {
 	public static final int SNAKE=2;
         public static void main(String[] args) {
            
+           while(position<100) {
            int diceNumber=(int) Math.floor(Math.random()*10)%6 + 1;
            System.out.println("Dice Number is: " +diceNumber);
            int checkMovement= (int) Math.floor(Math.random()*10)%3;
@@ -20,6 +21,9 @@ public class SnakeAndLadderGame {
 		default:
 			System.out.println("stay in same position");
 		}
-                System.out.println("Current position is: " +position);
+                if(position<0)
+			position=0;
+		System.out.println("Current position is: " +position);
+		}
   }
 }
