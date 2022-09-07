@@ -13,9 +13,11 @@ public class SnakeAndLadderGame {
 		switch(checkMovement) {
 		case LADDER:
 			position+=diceNumber;
+                        System.out.println("It's LADDER! Climb Up by" +" " +diceNumber+ " "+ "steps");
 			break;
 		case SNAKE:
 			position-=diceNumber;
+                        System.out.println("It's SNAKE! Go back by" +" " +diceNumber+ " "+ "steps");
 			break;
 		default:
 			System.out.println("stay in same position");
